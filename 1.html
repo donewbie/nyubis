@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"> <!-- 언어 -->
+    <meta name="keywords" content="newbieTest"><!-- 검색 키워드 -->
+    <meta name="description" content="테스트 용도"><!-- 웹페이지에 대한 설명 정의 -->
+    <meta name="author" content="Newbie Do"><!-- 페이지 작성자 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 뷰포트 정의 -->
+    <!-- width=device-width -> 디바이스에 따라 페이지 폭 설정, initial-scale -> 처음 브라우저에 의해로드 된 초기 줌 레벨 설정 -->
+    <!--[ 검색봇 ]-->
+    <!--<meta http-equiv="refresh" content="30"><!--페이지 새로고침-->
+    <meta name="robots" content="noindex, nofollow"><!-- 검색 로봇 접근 제어 -->
+    <meta name="Googlebot" content="noindex, NOFOLLOW"><!-- 구글봇 접근 제어 -->
+    <!--[SNS]-->
+    <meta property="og:title" content="뉴비의 테스트" /><!-- 사이트 제목 -->
+    <meta property="og:description" content="테스트용으로 만들었습니다" /><!-- 사이트 설명 -->
+    <meta property="og:image" content="" /><!-- 사이트 대표이미지 -->
+    <meta property="og:url" content="" /><!-- 표준 링크(같은 콘텐츠를 가리키는 여러 개의 URL 중 대표 URL) -->
+    <title>NewbieTest</title>
+    <link rel="stylesheet" href="reset.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script><!-- jquery cdn-->
+    <style media="screen">
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <!--[ header ]-->
+      <header>
+      <div id="header">
+        <h1><a href="/">뉴비의 테스트장</a></h1>
+        <!--[ nav ]-->
+        <nav>
+        <div id="nav">
+          <ul>
+            <li><a href="#" title="첫번째 메뉴로 이동하기">첫번째메뉴</a></li>
+            <li><a href="#" title="두번째 메뉴로 이동하기">두번째메뉴</a></li>
+            <li><a href="#" title="세번째 메뉴로 이동하기">3번째메뉴</a></li>
+            <li>
+              <a href="www.naver.com" class="no-link" title="네번째 메뉴의 하위 메뉴 상세보기">4번째메뉴</a>
+              <ul class="is-accordion">
+                <li><a href="#" title="4-1메뉴로 이동하기">4-1메뉴</a></li>
+                <li><a href="#" title="4-2메뉴로 이동하기">4-2메뉴</a></li>
+                <li><a href="#" title="4-3메뉴로 이동하기">4-3메뉴</a></li>
+                <li><a href="#" title="4-4메뉴로 이동하기">4-4메뉴</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        </nav>
+        <!--/ nav /-->
+      </div>
+      </header>
+      <!--/ header /-->
+
+      <!-- [section] -->
+      <section>
+      <div class="section"></div>
+      </section>
+      <!--/ section /-->
+
+      <!-- [footer] -->
+      <footer>
+      <div class="footer"></div>
+      </footer>
+      <!--/ footer /-->
+    </div>
+    <script type="text/javascript">
+      $(".no-link").closest('li').on('onmouseenter', function(e){
+        $(this).on('click', function(e){
+          e.preventDefault(); //기본이벤트제거
+          e.stopPropagation(); //이벤트전달제어
+        });
+      });
+    </script>
+  </body>
+</html>
